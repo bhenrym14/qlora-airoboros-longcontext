@@ -1,0 +1,44 @@
+python qlora_airo.py \
+    --model_name_or_path models/llama-30b \
+    --output_dir ./output/airo-33b-PI-8192 \
+    --logging_steps 1 \
+    --save_strategy steps \
+    --data_seed 42 \
+    --save_steps 500 \
+    --save_total_limit 40 \
+    --evaluation_strategy steps \
+    --eval_dataset_size 1024 \
+    --max_eval_samples 1000 \
+    --per_device_eval_batch_size 1 \
+    --max_new_tokens 1800 \
+    --dataloader_num_workers 3 \
+    --logging_strategy steps \
+    --remove_unused_columns False \
+    --do_train \
+    --do_eval \
+    --do_mmlu_eval \
+    --lora_r 64 \
+    --lora_alpha 16 \
+    --lora_modules all \
+    --double_quant \
+    --quant_type nf4 \
+    --bf16 \
+    --bits 4 \
+    --warmup_ratio 0.03 \
+    --lr_scheduler_type constant \
+    --dataset ../../datasets/finetune_datasets/airoboros-gpt4-1.4.1/instructions.jsonl \
+    --dataset_format airoboros \
+    --model_max_len 2048 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --num_train_epochs 3 \
+    --group_by_length False \
+    --eval_steps 187 \
+    --learning_rate 0.0001 \
+    --adam_beta2 0.999 \
+    --max_grad_norm 0.3 \
+    --lora_dropout 0.05 \
+    --weight_decay 0.0 \
+    --seed 0 \
+    --report_to wandb \
+    --gradient_checkpointing
