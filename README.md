@@ -9,7 +9,7 @@ https://github.com/jondurbin/qlora
 https://github.com/artidoro/qlora/tree/main/scripts
 
 Relevant research:
-https://arxiv.org/abs/2305.14314
-https://arxiv.org/abs/2306.15595
-https://kaiokendev.github.io/til#extending-context-to-8k
+- https://arxiv.org/abs/2305.14314
+- https://arxiv.org/abs/2306.15595
+- https://kaiokendev.github.io/til#extending-context-to-8k
 
