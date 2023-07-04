@@ -1,3 +1,4 @@
+"""Scaled Rotary Embedding module patch. Credit https://kaiokendev.github.io/til#extending-context-to-8k"""
 import torch
 import transformers
 import transformers.models.llama.modeling_llama
